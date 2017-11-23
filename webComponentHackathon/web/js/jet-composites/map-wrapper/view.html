@@ -6,60 +6,63 @@
 
     <head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
     </head>
 
     <body>
 
         <div class="container" align="center">
-            <label for="SelectFrom"><h4>Select Start Point:
-<select class="btn-info btn-lg" id="SelectFrom">
+            <h2><label for="SelectFrom">Select Start Point:</h2>
+            <select class="btn-info btn-lg dropdown-toggle" id="SelectFrom">
   <option value="LA">Langa</option>
   <option value="SR">Salt River</option>
   <option value="MB">Mowbray</option>
   <option value="CM">Claremont</option>
   <option value="WB">Wynberg</option>
   <option value="CT">Cape Town</option>
-</select><br></br>
-</label>
+</select></br>
+            </label>
 
-            <label for="SelectTo">Select End Point:
-<select class="btn-info btn-lg" id="SelectTo">
+            <h2><label for="SelectTo">Select End Point:</h2>
+            <select class="btn-info btn-lg dropdown-toggle" id="SelectTo">
   <option value="CT">Cape Town</option>
   <option value="SR">Salt River</option>
   <option value="MB">Mowbray</option>
   <option value="CM">Claremont</option>
   <option value="WB">Wynberg</option>
   <option value="LA">Langa</option>
-</select></h4>
-</label><br>
+</select>
+            </label><br>
             <h5>
 <input type="button" class='btn btn-primary btn-lg' name="name" data-bind="click:clickhandler"value="Go"><br></br>
 </h5>
 
+            <div data-bind="visible: display">
 
-            <table>
-                <thead>
-                    <th>Driving</th>
-                    <th>Walking</th>
-                </thead>
+                <table>
+                    <thead>
+                        <th style="text align: center">Driving</th>
+                        <th style="text align: center">Walking</th>
+                    </thead>
 
-                <tbody>
-                    <tr>
-                        <td data-bind="text : distanceWalk"></td>
-                        <td data-bind="text : distance"></td>
-                    </tr>
-                    <tr>
-                        <td data-bind="text : duration"></td>
-                        <td data-bind="text : durationWalk"></td>
-                    </tr>
+                    <tbody>
+                        <tr>
+                            <td data-bind="text : distance"></td>
+                            <td data-bind="text : distanceWalk"></td>
+                        </tr>
+                        <tr>
+                            <td data-bind="text : duration"></td>
+                            <td data-bind="text : durationWalk"></td>
+                        </tr>
 
-                </tbody>
-            </table><br>
+                    </tbody>
+                </table><br>
 
 
-            <p data-bind="text: message"></p><br>
-            <div id="googleMap" data-bind="style: {height: height, width: width  }"></div>
+                <p data-bind="text: message"></p><br>
+                <div id="googleMap" data-bind="style: {height: height, width: width  }"></div>
 
+            </div>
         </div>
 </div>
 </body>

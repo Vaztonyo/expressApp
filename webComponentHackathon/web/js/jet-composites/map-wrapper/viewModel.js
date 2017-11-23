@@ -22,7 +22,7 @@ define(
 
         self.longFrom = ko.observable();
         self.latFrom = ko.observable();
-
+        self.display = ko.observable(false);
         self.longTo = ko.observable();
         self.latTo = ko.observable();
 
@@ -50,6 +50,7 @@ define(
               self.latTo(locations[i].lat)
             }
           }
+          self.display(true);
           self.composite.drawMap();
         }
         self.composite.drawMap = function(){
