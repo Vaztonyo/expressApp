@@ -1,0 +1,36 @@
+map-wrapper:not(.oj-complete){
+  visibility: hidden;
+}
+
+map-wrapper{
+
+}
+
+p{
+  font-size: 20px;
+  color: dodgerblue;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+    font-size: 20px;
+    /*text-align: center;
+    display: none;*/
+}
+
+th, td {
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+thead{
+  text-align: center;
+}
